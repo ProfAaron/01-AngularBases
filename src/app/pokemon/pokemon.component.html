@@ -1,0 +1,16 @@
+<h1>App Pokemon</h1>
+
+<hr>
+
+
+<div class="row">
+
+    <div class="col">
+        <app-lista [listaPokemon]="listaPokemon"></app-lista>
+    </div>
+    <div class="col">
+
+        <app-agregar (onPokemonAgregado)="agregar( $event )"></app-agregar>
+    </div>
+
+</div>
