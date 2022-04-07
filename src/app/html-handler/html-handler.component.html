@@ -8,10 +8,24 @@
                 placeholder="Nombre"
                 (keyup)="guardar( $event, txtNombre.value )"
                 #txtNombre>
+
             <input type="text"
                 placeholder="Apellido"
                 [(ngModel)]="apellido"
                 (keyup.enter)="almacenar()">
+
+            <input type="text"
+                placeholder="Edad"
+                (keyup.enter)="calcularEdad()"
+                id="txtEdad"
+                
+                >
+
+            <input type="text"
+                placeholder="Ciudad"
+                (keyup.enter)="darCiudad()"
+                #txtCiudad
+            >
         </div>
     </div>
     <div class="row justify-content-center">
