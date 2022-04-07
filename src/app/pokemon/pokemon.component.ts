@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Pokemon } from './pokemon';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-pokemon',
@@ -8,26 +7,4 @@ import { Pokemon } from './pokemon';
 })
 export class PokemonComponent {
 
-  constructor() { }
-
-  nuevo:Pokemon = {
-    nombre: '',
-    pc: 0
-  }
-
-  listaPokemon: Pokemon[] = [
-    {
-      nombre: 'charmander',
-      pc: 500
-    },
-    {
-      nombre: 'squirtle',
-      pc: 650
-    }
-  ]
-
-  agregar( parametro: Pokemon ){
-    this.listaPokemon.push(parametro);
-    console.log(this.listaPokemon);
-  }
 }

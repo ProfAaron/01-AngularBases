@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { Pokemon } from '../pokemon';
+import { PokemonService } from '../pokemon.service';
 
 @Component({
   selector: 'app-agregar',
@@ -7,10 +8,10 @@ import { Pokemon } from '../pokemon';
 })
 export class AgregarComponent {
 
-  constructor() { }
+  constructor(private servicioPokemon: PokemonService) { }
 
-   @Output() onPokemonAgregado 
-    = new EventEmitter<Pokemon>();
+   /*@Output() onPokemonAgregado 
+    = new EventEmitter<Pokemon>();*/
 
   nuevo: Pokemon = {
     nombre: "",
@@ -18,7 +19,8 @@ export class AgregarComponent {
   }
 
   agregar( ){
-    this.onPokemonAgregado.emit(this.nuevo);
+    //this.onPokemonAgregado.emit(this.nuevo);
+    this.servicioPokemon.agregarPokemon(this.nuevo);
     this.nuevo= {
       nombre: "",
       pc: 0

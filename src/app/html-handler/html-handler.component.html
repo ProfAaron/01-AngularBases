@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col">
+            <h3>Dato</h3>
+        </div>
+        <div class="col">
+            <input type="text"
+                placeholder="Nombre"
+                (keyup)="guardar( $event, txtNombre.value )"
+                #txtNombre>
+            <input type="text"
+                placeholder="Apellido"
+                [(ngModel)]="apellido"
+                (keyup.enter)="almacenar()">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col">
+            Usuario: {{nombre}} {{apellido}} - {{edad}}
+        </div>
+    </div>
+</div>
