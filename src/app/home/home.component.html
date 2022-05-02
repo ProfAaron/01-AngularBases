@@ -1,0 +1,39 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav mode="over">
+        <mat-toolbar>
+            Menu
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar>
+
+        <mat-nav-list>
+            <mat-list-item>
+                <mat-icon>folder</mat-icon>
+                <div mat-line>Home</div>
+                <div mat-line>02-05-2022</div>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon>people</mat-icon>
+                <div mat-line>Users</div>
+                <div mat-line>02-05-2022</div>
+            </mat-list-item>
+
+        </mat-nav-list>
+
+    </mat-sidenav>
+
+
+    <mat-toolbar>
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="spacer"></span>
+        <button mat-button>Logout</button>
+    </mat-toolbar>
+
+    <div class="container">
+        <h1>contenido</h1>
+        <!-- <router-outlet></router-outlet> -->
+    </div>
+</mat-sidenav-container>
