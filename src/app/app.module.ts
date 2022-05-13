@@ -10,13 +10,16 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { MaterialModuleModule } from './home/material-module.module';
+import { HttpComponent } from './http/http.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     BootstrapComponent,
     HtmlHandlerComponent,
-    HomeComponent
+    HomeComponent,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { MaterialModuleModule } from './home/material-module.module';
     PokemonModule,
     FormsModule,
     BrowserAnimationsModule,
-    MaterialModuleModule
+    MaterialModuleModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

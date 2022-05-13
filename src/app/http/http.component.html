@@ -1,0 +1,27 @@
+<div>
+    <input type="text" name="pais" [(ngModel)]="pais">
+    <button (click)="buscar()">Buscar</button>
+</div>
+<div *ngIf="hayError">
+    No se encontró nada con el término {{pais}}
+</div>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Bandera</th>
+                <th>Nombre</th>
+                <th>Población</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pais of paises; index as i">
+                <td>{{i + 1}}</td>
+                <td>{{pais.flag}}</td>
+                <td>{{pais.name.common}}</td>
+                <td>{{pais.population}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
